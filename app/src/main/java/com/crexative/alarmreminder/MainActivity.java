@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             }
         });
 
-        getLoaderManager().initLoader(VEHICLE_LOADER, null, this);
+        getSupportLoaderManager().initLoader(VEHICLE_LOADER, null, this);
     }
 
     @Override
@@ -129,6 +129,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     @Override
     public void onLoaderReset(@NonNull Loader<Cursor> loader) {
-        mCursorAdapter.swapCursor(null)
+        mCursorAdapter.swapCursor(null);
     }
 }
